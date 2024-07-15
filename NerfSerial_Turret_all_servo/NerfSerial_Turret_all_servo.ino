@@ -92,17 +92,17 @@ void loop() {
         
       
         //  "l" and "r" means moving 1 degree up/down for left/right of small servo
-        else if (userFire == 'l' and posx < 180) {
+        else if (userFire == 'r' and posx < 180) {
             posx = posx + 1;
             myservosmall.write(posx); 
-            Serial.write("left by 3 degrees...."); 
+            Serial.write("right by 3 degrees...."); 
 
           }// end of up sequence
           
-         else if (userFire == 'r' and posx > 0)  {
+         else if (userFire == 'l' and posx > 0)  {
             posx = posx - 1;
             myservosmall.write(posx); 
-            Serial.write("right by 3 degrees....");
+            Serial.write("left by 3 degrees....");
 
           }// end of down sequence
 
